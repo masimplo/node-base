@@ -1,0 +1,15 @@
+coverage/
+node_modules/
+typings/
+npm-debug.log
+reports/
+**/.DS_Store
+.settings
+.vscode/*
+!.vscode/tasks.json
+src/**/*.js
+src/**/*.js.map
+spec/**/*.js
+spec/**/*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
