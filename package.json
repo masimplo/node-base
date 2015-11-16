@@ -2,14 +2,16 @@
   "name": "node-base",
   "version": "0.0.1",
   "description": "Base repo for node.js typescript development",
-  "license": "ISC",
-  "author": "",
-  "keywords": [],
-  "files": [
-    "lib"
-  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masimakopoulos/node-base"
+  },
+  "author": "Michael Asimakopoulos",
+  "keywords": ["node", "express", "typescript","tape", "supertest", "npm task", "node-base"],
   "scripts": {
     "postinstall": "tsd install",
+    "clean": "trash src/**/*.js* spec/**/*.js* e2e/**/*.js*",
     "lint": "tsconfig && tsconfig-lint",
     "build": "tsc -p .",
     "start": "npm run build && node src/index.js",
@@ -24,11 +26,11 @@
   "devDependencies": {
     "commitizen": "^2.4.4",
     "cz-conventional-changelog": "^1.1.4",
-    "del": "2.0.2",
     "onchange": "^2.0.0",
     "supertest": "^1.1.0",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.2",
+    "trash-cli": "^1.2.0",
     "tsconfig-glob": "^0.2.1",
     "tsconfig-lint": "^0.1.9",
     "tsd": "^0.6.5",
