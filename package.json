@@ -31,6 +31,7 @@
     "tape": "^4.2.2",
     "tsconfig-glob": "^0.2.1",
     "tsconfig-lint": "^0.1.9",
+    "tsd": "^0.6.5",
     "tslint": "^2.5.1",
     "typescript": "^1.6.2"
   },
