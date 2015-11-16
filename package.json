@@ -1,45 +1,46 @@
 {
-	"name": "node-base",
-	"version": "0.0.1",
-	"description": "Base repo for node.js typescript development",
-	"license": "ISC",
-	"author": "",
-	"keywords": [],
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"postinstall": "tsd install",
-		"lint": "tsconfig && tsconfig-lint",
-		"build": "tsconfig && npm run lint && tsc -p .",
-		"start": "npm run build && node src/app.js",
-		"test": "npm run build && tape spec/**/*.js | tap-spec",
-		"test:watch": "onchange 'src/**/*.ts' 'spec/**/*.ts' -- npm test",
-		"e2e": "npm run build && tape e2e/**/*.js | tap-spec",
-		"e2e:watch": "onchange 'src/**/*.ts' 'e2e/**/*.ts' -- npm run e2e"
-	},
-	"dependencies": {
-		"express": "^4.13.3"
-	},
-	"devDependencies": {
-		"commitizen": "^2.4.4",
-		"cz-conventional-changelog": "^1.1.4",
-		"del": "2.0.2",
-		"onchange": "^2.0.0",
-		"supertest": "^1.1.0",
-		"tap-spec": "^4.1.0",
-		"tape": "^4.2.2",
-		"tsconfig-glob": "^0.2.1",
-		"tsconfig-lint": "^0.1.9",
-		"tslint": "^2.5.1"
-	},
-	"engines": {
-		"node": ">=0.12.0"
-	},
-	"main": "app.js",
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	}
+  "name": "node-base",
+  "version": "0.0.1",
+  "description": "Base repo for node.js typescript development",
+  "license": "ISC",
+  "author": "",
+  "keywords": [],
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "postinstall": "tsd install",
+    "lint": "tsconfig && tsconfig-lint",
+    "build": "tsc -p .",
+    "start": "npm run build && node src/index.js",
+    "test": "npm run build && tape spec/**/*.js | tap-spec",
+    "test:watch": "onchange 'src/**/*.ts' 'spec/**/*.ts' -- npm test",
+    "e2e": "npm run build && tape e2e/**/*.js | tap-spec",
+    "e2e:watch": "onchange 'src/**/*.ts' 'e2e/**/*.ts' -- npm run e2e"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "commitizen": "^2.4.4",
+    "cz-conventional-changelog": "^1.1.4",
+    "del": "2.0.2",
+    "onchange": "^2.0.0",
+    "supertest": "^1.1.0",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2",
+    "tsconfig-glob": "^0.2.1",
+    "tsconfig-lint": "^0.1.9",
+    "tslint": "^2.5.1",
+    "typescript": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "main": "app.js",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
