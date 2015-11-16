@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/masimakopoulos/node-base.svg)](https://travis-ci.org/masimakopoulos/node-base)
 # node-base
 
 This aims to be start project for nodejs and express projects. Source and test files support typescript. Unit tests use the excellent tape library and integration api tests use the supertest library.
