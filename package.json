@@ -9,6 +9,7 @@
 		"lib"
 	],
 	"scripts": {
+		"postinstall": "tsd install",
 		"lint": "tsconfig && tsconfig-lint",
 		"build": "tsconfig && npm run lint && tsc -p .",
 		"start": "npm run build && node src/app.js",
