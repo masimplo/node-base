@@ -8,7 +8,15 @@
     "url": "https://github.com/masimakopoulos/node-base"
   },
   "author": "Michael Asimakopoulos",
-  "keywords": ["node", "express", "typescript","tape", "supertest", "npm task", "node-base"],
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "tape",
+    "supertest",
+    "npm task",
+    "node-base"
+  ],
   "scripts": {
     "postinstall": "tsd install",
     "clean": "trash src/**/*.js* spec/**/*.js* e2e/**/*.js*",
@@ -17,6 +25,7 @@
     "start": "npm run build && node src/index.js",
     "test": "npm run build && tape spec/**/*.js | tap-spec",
     "test:watch": "onchange 'src/**/*.ts' 'spec/**/*.ts' -- npm test",
+    "test:coverage": "npm run build && istanbul cover tape 'spec/**/*.js' > test.tap && istanbul report clover",
     "e2e": "npm run build && tape e2e/**/*.js | tap-spec",
     "e2e:watch": "onchange 'src/**/*.ts' 'e2e/**/*.ts' -- npm run e2e"
   },
@@ -26,6 +35,7 @@
   "devDependencies": {
     "commitizen": "^2.4.4",
     "cz-conventional-changelog": "^1.1.4",
+    "istanbul": "^0.4.0",
     "onchange": "^2.0.0",
     "supertest": "^1.1.0",
     "tap-spec": "^4.1.0",
